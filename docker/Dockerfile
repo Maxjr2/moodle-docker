@@ -1,4 +1,4 @@
-FROM php:8.1-apache
+FROM php:8.1-fpm
 
 RUN pecl install openssl
 RUN pecl install tokenizer
