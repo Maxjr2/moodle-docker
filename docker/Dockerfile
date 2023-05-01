@@ -1,19 +1,23 @@
 FROM php:8.1-fpm
 
-RUN pecl install openssl
-RUN pecl install tokenizer
-RUN pecl install xmlrpc
-RUN pecl install soap
-RUN pecl install ctype
-RUN pecl install zip
-RUN pecl install gd
-RUN pecl install simplexml
-RUN pecl install spl
-RUN pecl install pcre
-RUN pecl install dom
-RUN pecl install xml
-RUN pecl install intl
-RUN pecl install json
+RUN docker-php-ext-install iconv
+RUN docker-php-ext-install mbstring
+RUN docker-php-ext-install curl
+RUN docker-php-ext-install openssl
+RUN docker-php-ext-install tokenizer
+RUN docker-php-ext-install xmlrpc
+RUN docker-php-ext-install soap
+RUN docker-php-ext-install ctype
+RUN docker-php-ext-install zip
+RUN docker-php-ext-install gd
+RUN docker-php-ext-install simplexml
+RUN docker-php-ext-install spl
+RUN docker-php-ext-install pcre
+RUN docker-php-ext-install dom
+RUN docker-php-ext-install xml
+RUN docker-php-ext-install intl
+RUN docker-php-ext-install json
+
 RUN docker-php-ext-enable iconv 
 RUN docker-php-ext-enable mbstring
 RUN docker-php-ext-enable curl
