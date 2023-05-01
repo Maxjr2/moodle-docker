@@ -1,7 +1,6 @@
 FROM php:8.1-fpm
 
 RUN docker-php-ext-install iconv
-RUN docker-php-ext-install mbstring
 RUN docker-php-ext-install curl
 RUN docker-php-ext-install openssl
 RUN docker-php-ext-install tokenizer
