@@ -1,5 +1,7 @@
 FROM php:8.1-fpm
 
+RUN apt-get update -y && apt-get install -y curl && apt-get clean -y
+RUN apt-get install -y libzip-dev libicu-dev libpng-dev libxml2-dev libonig-dev libcurl4-openssl-dev libssl-dev libxml2-dev libxml2-utils libxslt1-dev libxslt1.1 libxslt-dev libxslt1.1 libxslt1-dev
 RUN docker-php-ext-install iconv
 RUN docker-php-ext-install curl
 RUN docker-php-ext-install openssl
