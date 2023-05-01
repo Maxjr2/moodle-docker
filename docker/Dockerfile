@@ -1,7 +1,5 @@
 FROM php:8.1-apache
 
-RUN pecl install mbstring
-RUN pecl install curl
 RUN pecl install openssl
 RUN pecl install tokenizer
 RUN pecl install xmlrpc
